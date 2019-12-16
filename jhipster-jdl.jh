@@ -1,0 +1,37 @@
+entity Student {
+	name String,
+    surname String,
+    secondSurname String,
+    sex String,
+    birthdate LocalDate
+}
+
+entity Course {
+	name String,
+    state String
+}
+
+entity Professor {
+	name String,
+    surname String,
+    secondSurname String,
+    sex String,
+    birthdate LocalDate,
+    hiringDate LocalDate
+}
+
+entity Period {
+	name String,
+    startDate LocalDate,
+    endingDate LocalDate,
+    state String
+}
+
+relationship ManyToMany {
+    Course{student(name)} to Student{course},
+    Course{professor(name)} to Professor{course},
+    Course{period(name)} to Period{course}
+}
+
+// Set pagination options
+paginate Student, Course, Professor, Period with infinite-scroll

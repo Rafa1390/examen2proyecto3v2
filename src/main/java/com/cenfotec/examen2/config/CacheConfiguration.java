@@ -44,6 +44,16 @@ public class CacheConfiguration {
             createCache(cm, com.cenfotec.examen2.domain.User.class.getName() + ".authorities");
             createCache(cm, com.cenfotec.examen2.domain.PersistentToken.class.getName());
             createCache(cm, com.cenfotec.examen2.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.cenfotec.examen2.domain.Student.class.getName());
+            createCache(cm, com.cenfotec.examen2.domain.Student.class.getName() + ".courses");
+            createCache(cm, com.cenfotec.examen2.domain.Course.class.getName());
+            createCache(cm, com.cenfotec.examen2.domain.Course.class.getName() + ".students");
+            createCache(cm, com.cenfotec.examen2.domain.Course.class.getName() + ".professors");
+            createCache(cm, com.cenfotec.examen2.domain.Course.class.getName() + ".periods");
+            createCache(cm, com.cenfotec.examen2.domain.Professor.class.getName());
+            createCache(cm, com.cenfotec.examen2.domain.Professor.class.getName() + ".courses");
+            createCache(cm, com.cenfotec.examen2.domain.Period.class.getName());
+            createCache(cm, com.cenfotec.examen2.domain.Period.class.getName() + ".courses");
             // jhipster-needle-ehcache-add-entry
         };
     }

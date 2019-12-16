@@ -1,0 +1,49 @@
+{
+    "name": "Professor",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "surname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "secondSurname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sex",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthdate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "hiringDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "professor",
+            "relationshipName": "course",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191215231123",
+    "entityTableName": "professor",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
